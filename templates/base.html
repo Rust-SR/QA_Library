@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Cover</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="navbar-brand" href="{{ url_for('index')}}">Главная</a>
+        <a class="nav-link" href="{{ url_for('create')}}">Создать пост</a>
+        <a class="nav-link" href="{{ url_for('posts')}}">Посты</a>
+      </nav>
+    </div>
+  </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+	<div class="container">
+        {% block content %} {% endblock %}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} QA Library {% endblock %}</h1>
+        <!-- Окно поиска, нужно дороботать -->
+		<form action="greet" method="POST">
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="search_input">
+        <br>
+        <input type="submit" value="ПОИСК" id="search">
+    </form>
+{% endblock %}
